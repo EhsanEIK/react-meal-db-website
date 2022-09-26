@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightcoral;
+    color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+nav h2 {
+    font-size: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: blue;
+}
