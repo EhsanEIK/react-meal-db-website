@@ -1,0 +1,47 @@
+/* ======================================
+            meal section
+======================================= */
+.meal {
+    height: 600px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* meal info style */
+.meal-info {
+    padding: 10px;
+}
+
+.meal-info h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.meal-info img {
+    width: 280px;
+    border-radius: 10px 10px 0 0;
+}
+
+.meal-info p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* btn cart style */
+.btn-cart {
+    font-size: 18px;
+    color: white;
+    background-color: coral;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+}
+
+.btn-cart:hover {
+    cursor: pointer;
+    background-color: lightcoral;
+}

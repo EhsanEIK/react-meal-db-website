@@ -1,0 +1,19 @@
+/* ======================================
+            main body section
+======================================= */
+.main-body {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+/* ======================================
+            meal container section
+======================================= */
+.meal-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 50px;
+}
