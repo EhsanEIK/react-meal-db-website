@@ -1,3 +1,6 @@
+/* ======================================
+                nav bar
+======================================= */
 nav {
     display: flex;
     align-items: center;
@@ -21,4 +24,39 @@ nav a {
 
 nav a:hover {
     color: blue;
+}
+
+/* ======================================
+            header section
+======================================= */
+.header-container {
+    background-image: url(../../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+}
+
+.header-details {
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+.header-details h1,
+p {
+    color: white;
+    margin: 0;
+}
+
+.header-details h1 {
+    font-size: 50px;
+    color: orange;
+    margin: 0;
+}
+
+.header-details p {
+    font-size: 18px;
+    margin-top: 20px;
 }

@@ -3,7 +3,7 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <div>
+        <header>
             <nav>
                 <h2>Food Anda</h2>
                 <div>
@@ -14,7 +14,13 @@ const Header = () => {
                     <a href="/contact">Contact Us</a>
                 </div>
             </nav>
-        </div>
+            <section className='header-container'>
+                <div className='header-details'>
+                    <h1>Welcome To <br />Food Anda App !!!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem placeat, eligendi animi assumenda beatae officiis obcaecati illum unde. Excepturi, iusto.</p>
+                </div>
+            </section>
+        </header>
     );
 };
 
