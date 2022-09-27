@@ -1,0 +1,12 @@
+footer {
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    background-color: lightcoral;
+    padding: 10px 20px;
+}
+
+footer a {
+    color: gold;
+}
