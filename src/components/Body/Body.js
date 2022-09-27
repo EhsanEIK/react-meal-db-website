@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Meal from '../Meal/Meal';
 import './Body.css'
 
@@ -11,16 +12,24 @@ const Body = () => {
             .then(data => setMeals(data.meals));
     }, []);
 
+    const [cart, setCart] = useState([]);
+    const addToCart = (meal) => {
+        /* console.log(meal.strMeal); */
+        const newCart = [...cart, meal];
+        setCart(newCart);
+    }
     return (
         <div className='main-body'>
             <div className='meal-container'>
                 {
                     meals.map(meal => <Meal
-                        meal={meal}></Meal>)
+                        key={meal.idMeal}
+                        meal={meal}
+                        handleMealCart={addToCart}></Meal>)
                 }
             </div>
             <div className='cart-container'>
-                <h1>Meal Cart</h1>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
