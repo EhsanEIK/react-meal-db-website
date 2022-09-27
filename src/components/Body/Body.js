@@ -19,12 +19,12 @@ const Body = () => {
         let newCart = [];
         const exists = cart.find(m => m.idMeal === selectedMeal.idMeal);
         if (!exists) {
-            selectedMeal.quantity = 1;
+            selectedMeal['quantity'] = 1;
             newCart = [...cart, selectedMeal];
         }
         else {
             const rest = cart.filter(m => m.idMeal !== exists.idMeal);
-            exists.quantity = exists.quantity + 1;
+            exists['quantity'] = exists['quantity'] + 1;
             newCart = [...rest, exists];
         }
         setCart(newCart);
@@ -45,7 +45,7 @@ const Body = () => {
         setCart(newCart);
     }, [meals])
 
-    console.log(cart)
+    // console.log(cart);
     return (
         <div className='main-body'>
             <div className='meal-container'>
