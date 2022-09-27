@@ -1,13 +1,13 @@
 // save data to local storage
-const addToDb = (meal) => {
+const addToDb = (id) => {
     let foodCart = getDataFromDb();
-    let quantity = foodCart[meal.idMeal];
+    let quantity = foodCart[id];
     if (quantity) {
         quantity++;
-        foodCart[meal.idMeal] = quantity;
+        foodCart[id] = quantity;
     }
     else {
-        foodCart[meal.idMeal] = 1;
+        foodCart[id] = 1;
     }
     localStorage.setItem('cart', JSON.stringify(foodCart));
 }

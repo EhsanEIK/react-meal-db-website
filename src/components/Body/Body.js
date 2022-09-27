@@ -14,6 +14,7 @@ const Body = () => {
             .then(data => setMeals(data.meals));
     }, []);
 
+    // save data to local storage and display selected meal on UI when click on the button 
     const addToCart = (selectedMeal) => {
         let newCart = [];
         const exists = cart.find(m => m.idMeal === selectedMeal.idMeal);
@@ -27,9 +28,10 @@ const Body = () => {
             newCart = [...rest, exists];
         }
         setCart(newCart);
-        addToDb(selectedMeal);
+        addToDb(selectedMeal.idMeal);
     }
 
+    // get data from local storage and diplay data on UI after 1st time loading
     useEffect(() => {
         const storedCart = getDataFromDb();
         let newCart = [];
