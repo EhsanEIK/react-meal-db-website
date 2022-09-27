@@ -13,9 +13,8 @@ const Body = () => {
     }, []);
 
     const [cart, setCart] = useState([]);
-    const addToCart = (meal) => {
-        /* console.log(meal.strMeal); */
-        const newCart = [...cart, meal];
+    const addToCart = (selectedMeal) => {
+        const newCart = [...cart, selectedMeal];
         setCart(newCart);
     }
     return (
