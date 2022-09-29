@@ -32,17 +32,17 @@
 /* btn cart style */
 .btn-cart {
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
     color: white;
     background-color: coral;
     border: 0;
     border-radius: 0 0 10px 10px;
-    position: absolute;
-    bottom: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 15px;
 }
 
 .btn-cart:hover {
@@ -52,15 +52,4 @@
 
 .btn-cart p {
     margin-right: 10px;
-}
-
-/* ======================================
-            media queries
-======================================= */
-@media screen and (max-width:688px) {
-
-    /* btn cart style */
-    .btn-cart {
-        padding: 15px;
-    }
 }
