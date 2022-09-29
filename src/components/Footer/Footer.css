@@ -10,3 +10,13 @@ footer {
 footer a {
     color: gold;
 }
+
+/* ======================================
+            media queries
+======================================= */
+@media screen and (max-width:688px) {
+    footer {
+        position: sticky;
+        bottom: 0;
+    }
+}

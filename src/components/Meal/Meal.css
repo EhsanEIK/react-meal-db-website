@@ -53,3 +53,14 @@
 .btn-cart p {
     margin-right: 10px;
 }
+
+/* ======================================
+            media queries
+======================================= */
+@media screen and (max-width:688px) {
+
+    /* btn cart style */
+    .btn-cart {
+        padding: 15px;
+    }
+}
