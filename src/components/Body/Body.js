@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getDataFromDb } from '../../utilities/fakeDb';
+import { addToDb, deleteDataFromDb, getDataFromDb } from '../../utilities/fakeDb';
 import Cart from '../Cart/Cart';
 import Meal from '../Meal/Meal';
-import './Body.css'
+import './Body.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Body = () => {
     const [meals, setMeals] = useState([]);
@@ -38,7 +40,7 @@ const Body = () => {
         addToDb(selectedMeal.idMeal);
     }
 
-    // get data from local storage and diplay data on UI after 1st time loading
+    // get data from local storage and display data on UI after 1st time loading
     useEffect(() => {
         const storedCart = getDataFromDb();
         let newCart = [];
@@ -51,6 +53,13 @@ const Body = () => {
         }
         setCart(newCart);
     }, [meals]);
+
+    // delete data from local storage and UI and give a toastify message
+    const deleteCart = () => {
+        toast.success("Your order is on the way!")
+        deleteDataFromDb();
+        setCart([]);
+    }
 
     return (
         <div className='main-body'>
@@ -70,7 +79,10 @@ const Body = () => {
                 </div>
             </div>
             <div className='cart-container'>
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}
+                    handleDeleteCart={deleteCart}>
+                </Cart>
+                <ToastContainer></ToastContainer>
             </div>
         </div >
     );

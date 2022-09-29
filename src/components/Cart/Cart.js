@@ -1,17 +1,12 @@
 import React from 'react';
 import './Cart.css';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleDeleteCart }) => {
     // console.log(cart);
     let quantity = 0;
     for (const meal of cart) {
         quantity += meal.quantity;
     }
-
-    // toastify message
-    const notify = () => toast.success("Your order is on the way!")
 
     return (
         <div className='cart'>
@@ -20,8 +15,7 @@ const Cart = ({ cart }) => {
             {
                 cart.map(meal => <li key={meal.idMeal}>{meal.strMeal} {meal.quantity ? meal.quantity : ''}</li>)
             }
-            <button onClick={notify} className='btn-confirm'>Confirm Order</button>
-            <ToastContainer></ToastContainer>
+            <button onClick={handleDeleteCart} className='btn-confirm'>Confirm Order</button>
         </div>
     );
 };
