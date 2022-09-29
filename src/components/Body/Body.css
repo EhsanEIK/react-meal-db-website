@@ -64,3 +64,40 @@
     padding-top: 20px;
     padding-left: 20px;
 }
+
+
+/* ======================================
+            media queries
+======================================= */
+@media screen and (max-width:688px) {
+
+    /* main body section */
+    .main-body {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* search container section */
+    .search-container {
+        flex-direction: column;
+    }
+
+    #search-element {
+        height: 40px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+
+    .btn-search {
+        padding: 8px 20px;
+        margin-left: 100px;
+        width: 50%;
+    }
+
+    /* meal container section */
+    .meal-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 40px;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
