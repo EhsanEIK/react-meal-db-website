@@ -14,6 +14,7 @@ const Cart = ({ cart }) => {
             {
                 cart.map(meal => <li key={meal.idMeal}>{meal.strMeal} {meal.quantity ? meal.quantity : ''}</li>)
             }
+            <button className='btn-confirm'>Confirm Order</button>
         </div>
     );
 };
