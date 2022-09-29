@@ -11,6 +11,7 @@ nav {
     justify-content: space-between;
     background-color: lightcoral;
     color: white;
+    padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
 }
