@@ -18,3 +18,12 @@
 .btn-confirm:hover {
     background-color: rgb(231, 130, 15);
 }
+
+/* ======================================
+            media queries
+======================================= */
+@media screen and (max-width:688px) {
+    .cart {
+        text-align: center;
+    }
+}

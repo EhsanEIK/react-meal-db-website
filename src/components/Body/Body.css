@@ -100,4 +100,11 @@
         margin-right: 0;
         margin-bottom: 50px;
     }
+
+    /* cart container section */
+    .cart-container {
+        position: sticky;
+        bottom: 0;
+        padding-bottom: 20px;
+    }
 }
