@@ -1,6 +1,10 @@
 /* ======================================
                 nav bar
 ======================================= */
+* {
+    margin: 0;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -59,4 +63,31 @@ nav a:hover {
 .header-details p {
     font-size: 18px;
     margin-top: 20px;
+}
+
+/* ======================================
+            media queries
+======================================= */
+@media screen and (max-width:688px) {
+
+    /* navbar */
+    nav {
+        display: block;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    nav h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    nav div {
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+
+    nav a {
+        margin-left: 15px;
+    }
 }
