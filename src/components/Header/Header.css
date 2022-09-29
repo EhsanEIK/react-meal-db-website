@@ -90,4 +90,21 @@ nav a:hover {
     nav a {
         margin-left: 15px;
     }
+
+    /* header section */
+    .header-details {
+        width: 100%;
+        text-align: center;
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .header-details h1 {
+        font-size: 25px;
+    }
+
+    .header-details p {
+        font-size: 18px;
+        margin-top: 20px;
+    }
 }
