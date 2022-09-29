@@ -56,9 +56,14 @@ const Body = () => {
 
     // delete data from local storage and UI and give a toastify message
     const deleteCart = () => {
-        toast.success("Your order is on the way!")
-        deleteDataFromDb();
-        setCart([]);
+        if (cart.length) {
+            toast.success("Your order is on the way!");
+            deleteDataFromDb();
+            setCart([]);
+        }
+        else {
+            toast.error("Please select item");
+        }
     }
 
     return (
