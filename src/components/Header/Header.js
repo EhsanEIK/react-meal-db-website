@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <header>
             <nav>
+                <div onClick={() => setOpen(!open)} className='baricon'>
+                    {
+                        open ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />
+                    }
+                </div>
                 <h2>Food Anda</h2>
-                <div>
+                <div className={`nav-link ${open ? 'show-nav-link' : ''}`}>
                     <a href="/home">Home</a>
                     <a href="/about">About</a>
                     <a href="/menu">Menu</a>

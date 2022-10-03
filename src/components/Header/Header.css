@@ -16,18 +16,22 @@ nav {
     padding-right: 100px;
 }
 
+.baricon {
+    display: none;
+}
+
 nav h2 {
     font-size: 30px;
 }
 
-nav a {
+.nav-link a {
     text-decoration: none;
     color: white;
     font-size: 18px;
     margin-left: 20px;
 }
 
-nav a:hover {
+.nav-link a:hover {
     color: blue;
 }
 
@@ -79,6 +83,17 @@ nav a:hover {
         padding-right: 0;
     }
 
+    .baricon {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0;
+    }
+
+    .baricon :first-child {
+        height: 35px;
+    }
+
     nav h2 {
         text-align: center;
         margin-bottom: 15px;
@@ -89,7 +104,15 @@ nav a:hover {
         margin-bottom: 10px;
     }
 
-    nav a {
+    .nav-link {
+        display: none;
+    }
+
+    .show-nav-link {
+        display: block;
+    }
+
+    .nav-link a {
         margin-left: 15px;
     }
 
